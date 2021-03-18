@@ -13,6 +13,7 @@ var volume =0.5
 var timer = 3;
 var guessCounter = 0; 
 
+
 function startGame(){
   progress = 0;
   gamePlaying = true;
