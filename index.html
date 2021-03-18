@@ -17,13 +17,27 @@
     <h1>"catch_the_sound"</h1>
     
     <p id="chance_prompt" class="hidden" >
-              . Good Luck. 
+              let the game begin! All the best! 
               You have <span id="life"></span> lives left. <br><br>
               Time: <span id="time"></span>
             </p>
             <!-- start and end button -->
-            <button id="startBtn" onclick="startGame()"> Start </button>
+            <button id="startBtn" click="startGame()"> Start </button>
             <button class="hidden" id="endBtn" onclick="stopGame()"> End </button>
+    
+  
+
+        <div class="game">
+            <!-- Four buttons -->
+            <div id="gameButtonArea"> 
+                <button id="button1" click="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()">  </button>
+                <button id="button2" click="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"> </button>
+                <button id="button3" click="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()">  </button>
+                <button id="button4" click="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()">  </button>
+            </div>
+            
+        </div>
+  
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
