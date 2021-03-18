@@ -60,13 +60,13 @@ button{
 #button5{
   background-color: #D7B8F3;
 }
-#button5:active, #button2.lit{
+#button5:active, #button5.lit{
   background-color: #885A89;
 }
 #button6{
   background-color: #75BBA7;
 }
-#button6:active, #button1.lit{
+#button6:active, #button6.lit{
   background-color: #315659;
 }
 /* using the class to stop and stat button*/

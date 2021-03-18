@@ -4,8 +4,8 @@ var clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
-var pattern = [1,1,4,3,1,2,1,3];  //keeps track of the secret pattern the button presses
-var pattern = [];  //keeps track of the pattern the button presses
+var pattern = [1,1,4,3,1,2,1,3,5,6,3,6];  //keeps track of the secret pattern the button presses
+var pattern = [] //
 var progress = 0  //keep track of progress and status
 var gamePlaying = false // keeps track od game is currently active or not
 var tonePlaying = false;
@@ -14,13 +14,16 @@ var timer = 20;
 var guessCounter = 0; 
 
 
-
 function startGame(){
   console.log("asd");
   progress = 0;
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  
+  for(let i=0;i<10;i++){
+    pattern[i] = 
+  }
   
   playClueSequence()
   
@@ -39,7 +42,7 @@ const freqMap = {
   3: 392,
   4: 466.2,
   5: 470.3,
-  
+  6: 490.56
 }
 
 
@@ -87,6 +90,7 @@ function clearButton(btn){
 
 function playSingleClue(btn){
   if(gamePlaying){
+    console.log("btn : ",btn)
     lightButton(btn);
     playTone(btn,clueHoldTime);
     setTimeout(clearButton,clueHoldTime,btn);
