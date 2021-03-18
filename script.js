@@ -20,6 +20,8 @@ function startGame(){
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   
+  playClueSequence();
+  
   }
 
 function stopGame(){
@@ -28,6 +30,12 @@ function stopGame(){
   document.getElementById("stopBtn").classList.add("hidden");
   
   }
+function hideChance(){
+  document.getElementById("welcome").classList.remove("hidden");
+  document.getElementById("chance_prompt").classList.add("hidden");
+
+
+}
 
 // Sound Synthesis Functions
 const freqMap = {
@@ -50,7 +58,8 @@ function startTone(btn){
     g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
     tonePlaying = true
   }
-}
+    
+
 function stopTone(){
     g.gain.setTargetAtTime(0,context.currentTime + 0.05,0.025)
     tonePlaying = false
