@@ -18,3 +18,4 @@ function stopGame(){
   document.getElementById("stopBtn").classList.add("hidden");
   
   }
+
