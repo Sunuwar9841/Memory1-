@@ -1,6 +1,6 @@
 //Global Variable
 
-const clueHoldTime = 1000; // how long to hold each clue's light/sound
+var clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 

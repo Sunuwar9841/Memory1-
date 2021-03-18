@@ -15,11 +15,9 @@ h1 {
 
 }
 
-
 button{
   padding : 10px;
-  border-radius : 10px;
-  
+  border-radius : 10px;  
 }
 
 #gameButtonArea > button {
@@ -27,21 +25,27 @@ button{
   height:200px;
   margin:2px;
 }
+
 #button1{
   background-color: lightgreen;
 }
+
 #button1:active, #button1.lit{
   background-color: green;
 }
+
 #button2{
   background-color:lightblue;
 }
+
 #button2:active, #button2.lit{
   background-color: blue;
 }
+
 #button3{
     background-color: pink;
 }
+
 #button3:active, #button3.lit{
     background-color: red;
 }
@@ -54,18 +58,17 @@ button{
 }
 
 #button5{
-    background-color: lightred;
+  background-color: #D7B8F3;
 }
-#button5:active, #button4.lit{
-    background-color:red;
+#button5:active, #button2.lit{
+  background-color: #885A89;
 }
 #button6{
-    background-color: lightpurple;
+  background-color: #75BBA7;
 }
-#button6:active, #button4.lit{
-    background-color:purple;
+#button6:active, #button1.lit{
+  background-color: #315659;
 }
-
 /* using the class to stop and stat button*/
 .hidden{
   display: none;
