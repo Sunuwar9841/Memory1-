@@ -133,13 +133,13 @@ function guess(btn){
   }
   
   //handling guesses
-  if(btn == pattern[guessCounter]){
+  if( pattern[guessCounter]== btn){
     if(guessCounter == progress){
-      if(progress == (pattern.length)-1){
+      if(progress == pattern.length - 1){
         winGame();
       }else{
-        clearTimer();
-        time.innerHTML = timer;
+        //clearTimer();
+        //time.innerHTML = timer;
         progress++;
         playClueSequence()
       }
@@ -147,9 +147,9 @@ function guess(btn){
       guessCounter++;
     }
   }else{
-    mistakes--;
-    life.innerHTML = mistakes;
+    //mistakes--;
+    //life.innerHTML = mistakes;
     if(mistakes == 0){
       loseGame()
     }
-    
+  }
