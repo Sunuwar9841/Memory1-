@@ -1,6 +1,6 @@
 //Global Variable
-
-
+var timer = 3;
+var guessCounter = 0; 
 const clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
@@ -83,10 +83,32 @@ function playSingleClue(btn){
 }
 
 function playClueSequence(){
+   guessCounter = 0;
+  const hold_on_time = 800;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
     delay += clueHoldTime 
     delay += cluePauseTime;
-  }
+  
 }
+
+}
+
+/*win lose */
+function loseGame(){
+  if(timer == 0){
+    setTimeout(function(){alert("Times up. Game Ove");},50);
+  }else{
+    setTimeout(function(){alert("Game Over. You lost.");},50);
+  }
+  stopGame();
+  
+}// end loseGame()
+
+
+function winGame(){
+  stopGame();
+  alert("You won. Congratulations!")
+
+}//end winGme()
