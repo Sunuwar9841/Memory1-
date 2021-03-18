@@ -2,21 +2,24 @@
 
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 2em;
-  background-color: stategrey;
-  color: #000000;
+  margin: 4em;
+  background-color:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+
+  color: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+
 }
 
 h1 {
   font-style: italic;
   color:#000000;
-  font-family: verdana, arial, sans-serif; 
+  font-family:  'Brush Script MT', cursive;
+}
 
 }
 
 button{
-  padding : 10px;
-  border-radius : 10px;
+  padding : 20px;
+  border-radius : 20px;
 }
 
 #button1{
