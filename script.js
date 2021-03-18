@@ -125,31 +125,4 @@ function winGame(){
 }
 
 
-//the guess function
-function guess(btn){
-   console.log("user guessed: " + btn);
-  if(!gamePlaying){
-    return;
-  }
-  
-  //handling guesses
-  if( pattern[guessCounter]== btn){
-    if(guessCounter == progress){
-      if(progress == pattern.length - 1){
-        winGame();
-      }else{
-        //clearTimer();
-        //time.innerHTML = timer;
-        progress++;
-        playClueSequence()
-      }
-    }else{
-      guessCounter++;
-    }
-  }else{
-    //mistakes--;
-    //life.innerHTML = mistakes;
-    if(mistakes == 0){
-      loseGame()
-    }
-  }
+}

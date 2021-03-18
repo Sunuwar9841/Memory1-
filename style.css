@@ -1,25 +1,24 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Brush Script MT', cursive;
+  text-shadow: 2px 2px pink;
   margin: 4em;
-  background-color:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-
-  color: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-
+  background-color: #FCFAFA;
+  color: #00000;
 }
 
 h1 {
   font-style: italic;
-  color:#000000;
-  font-family:  'Brush Script MT', cursive;
-}
+  color: #00000;
+  font-family: verdana, arial, sans-serif; 
 
 }
+
 
 button{
-  padding : 20px;
-  border-radius : 20px;
+  padding : 15px;
+  border-radius : 15px;
 }
 
 #button1{
