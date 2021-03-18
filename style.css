@@ -53,6 +53,18 @@ button{
     background-color:yellow;
 }
 
+#button5{
+    background-color: lightred;
+}
+#button5:active, #button4.lit{
+    background-color:red;
+}
+#button6{
+    background-color: lightpurple;
+}
+#button6:active, #button4.lit{
+    background-color:purple;
+}
 
 /* using the class to stop and stat button*/
 .hidden{
