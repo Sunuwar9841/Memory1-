@@ -14,6 +14,8 @@ var timer = 20;
 var guessCounter = 0; 
 
 
+
+
 function startGame(){
   progress = 0;
   gamePlaying = true;
