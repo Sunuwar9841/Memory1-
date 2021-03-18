@@ -19,10 +19,15 @@ var guessCounter = 0;
 function startGame(){
   progress = 0;
   gamePlaying = true;
+  var curScore =0;
+  var highScore = 0;
+  
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
-  
-  playClueSequence();
+  if (curScore > highScore) {
+    highScore = curScore;
+    
+    playClueSequence();
   
   }
 
@@ -31,9 +36,7 @@ function stopGame(){
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   
-  }
-function hideChance(){
-  document.getElementById("welcome").classList.remove("hidden");
+move("hidden");
   document.getElementById("chance_prompt").classList.add("hidden");
 
 
@@ -156,3 +159,6 @@ function guess(btn){
 }    
 
 
+ if (curScore > highScore) {
+    highScore = curScore;
+    updateParagraph()};
