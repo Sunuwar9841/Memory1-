@@ -2,25 +2,31 @@
 
 body {
   font-family: 'Brush Script MT', cursive;
-  text-shadow: 2px 2px pink;
-  margin: 4em;
-  background-color: #FCFAFA;
-  color: #00000;
+  text-shadow: #191970 ;
+  margin: 2,2em;
+  background-color: #FFFAF0;
+  color: #191970;
 }
 
 h1 {
   font-style: italic;
-  color: #00000;
+  color: #000000;
   font-family: verdana, arial, sans-serif; 
 
 }
 
 
 button{
-  padding : 15px;
-  border-radius : 15px;
+  padding : 10px;
+  border-radius : 10px;
+  
 }
 
+#gameButtonArea > button {
+  width:200px;
+  height:200px;
+  margin:2px;
+}
 #button1{
   background-color: lightgreen;
 }

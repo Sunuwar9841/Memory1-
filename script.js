@@ -4,7 +4,7 @@ const clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
-var pattern = [1,1,4,3,1,2,1,3];  //keeps track of the secret pattern the button presses
+//var pattern = [1,1,4,3,1,2,1,3];  //keeps track of the secret pattern the button presses
 //var pattern = [];  //keeps track of the pattern the button presses
 var progress = 0  //keep track of progress and status
 var gamePlaying = false // keeps track od game is currently active or not
@@ -44,6 +44,8 @@ const freqMap = {
   3: 392,
   4: 466.2
 }
+
+
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
   g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
@@ -58,8 +60,7 @@ function startTone(btn){
     g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
     tonePlaying = true
   }
-    
-
+}
 function stopTone(){
     g.gain.setTargetAtTime(0,context.currentTime + 0.05,0.025)
     tonePlaying = false
@@ -125,4 +126,3 @@ function winGame(){
 }
 
 
-}
