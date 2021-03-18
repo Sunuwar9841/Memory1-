@@ -4,7 +4,7 @@ var clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
-var pattern = [1,1,4,3,1,2,1,3,5,6,3,6];  //keeps track of the secret pattern the button presses
+//var pattern = [1,1,4,3,1,2,1,3,5,6,3,6];  //keeps track of the secret pattern the button presses
 var pattern = [] //
 var progress = 0  //keep track of progress and status
 var gamePlaying = false // keeps track od game is currently active or not
@@ -22,9 +22,9 @@ function startGame(){
   document.getElementById("stopBtn").classList.remove("hidden");
   
   for(let i=0;i<10;i++){
-    pattern[i] = 
+    pattern[i] = Math.ceil(Math.random() * 6);
   }
-  
+  console.log(pattern)
   playClueSequence()
   
 }
