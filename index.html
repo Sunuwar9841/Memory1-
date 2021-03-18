@@ -14,11 +14,16 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1></h1>
+    <h1>"catch_the_sound"</h1>
     
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+    <p id="chance_prompt" class="hidden" >
+              . Good Luck. 
+              You have <span id="life"></span> lives left. <br><br>
+              Time: <span id="time"></span>
+            </p>
+            <!-- start and end button -->
+            <button id="startBtn" onclick="startGame()"> Start </button>
+            <button class="hidden" id="endBtn" onclick="stopGame()"> End </button>
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
