@@ -15,29 +15,21 @@ var guessCounter = 0;
 
 
 
-
 function startGame(){
+  console.log("asd");
   progress = 0;
   gamePlaying = true;
-  var curScore =0;
-  var highScore = 0;
-  
   document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("stopBtn").classList.add("hidden");
-  if (curScore > highScore) {
-    highScore = curScore;
-    
-    playClueSequence();
+  document.getElementById("stopBtn").classList.remove("hidden");
   
-  }
+  playClueSequence()
+  
+}
 
 function stopGame(){
   gamePlaying = false;
-  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
-  
-move("hidden");
-  document.getElementById("chance_prompt").classList.add("hidden");
 }
 
 // Sound Synthesis Functions
@@ -45,7 +37,9 @@ const freqMap = {
   1: 261.6,
   2: 329.6,
   3: 392,
-  4: 466.2
+  4: 466.2,
+  5: 470.3,
+  
 }
 
 
@@ -159,6 +153,4 @@ function guess(btn){
 }    
 
 
- if (curScore > highScore) {
-    highScore = curScore;
-    updateParagraph()};
+ 
