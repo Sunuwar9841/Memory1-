@@ -3,9 +3,23 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
+  background-color: stategrey;
+  color: #000000;
 }
 
 h1 {
   font-style: italic;
-  color: #373fff;
+  color:#000000;
+  font-family: verdana, arial, sans-serif; 
+
+}
+
+button{
+  padding : 10px;
+  border-radius : 10px;
+
+
+/* using the class to stop and stat button*/
+.hidden{
+  display: none;
 }
