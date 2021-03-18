@@ -38,8 +38,6 @@ function stopGame(){
   
 move("hidden");
   document.getElementById("chance_prompt").classList.add("hidden");
-
-
 }
 
 // Sound Synthesis Functions
@@ -59,7 +57,9 @@ function playTone(btn,len){
     stopTone()
   },len)
 }
+  
 function startTone(btn){
+  console.log(btn)
   if(!tonePlaying){
     o.frequency.value = freqMap[btn]
     g.gain.setTargetAtTime(volume,context.currentTime + 0.05,0.025)
