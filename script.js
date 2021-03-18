@@ -10,7 +10,7 @@ var progress = 0  //keep track of progress and status
 var gamePlaying = false // keeps track od game is currently active or not
 var tonePlaying = false;
 var volume =0.5
-var timer = 3;
+var timer = 20;
 var guessCounter = 0; 
 
 
