@@ -1,6 +1,5 @@
 //Global Variable
-var timer = 3;
-var guessCounter = 0; 
+
 const clueHoldTime = 1000; // how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
@@ -11,6 +10,8 @@ var progress = 0  //keep track of progress and status
 var gamePlaying = false // keeps track od game is currently active or not
 var tonePlaying = false;
 var volume =0.5
+var timer = 3;
+var guessCounter = 0; 
 
 function startGame(){
   progress = 0;
@@ -84,7 +85,7 @@ function playSingleClue(btn){
 
 function playClueSequence(){
    guessCounter = 0;
-  const hold_on_time = 800;
+  const hold_on_time = 500;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
     setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
@@ -95,12 +96,12 @@ function playClueSequence(){
 
 }
 
-/*win lose */
+/*loseGame or winGame*/
 function loseGame(){
   if(timer == 0){
-    setTimeout(function(){alert("Times up. Game Ove");},50);
+    setTimeout(function(){alert("Time over, better luck next time");},50);
   }else{
-    setTimeout(function(){alert("Game Over. You lost.");},50);
+    setTimeout(function(){alert("Game Over. You lost");},50);
   }
   stopGame();
   
@@ -109,6 +110,36 @@ function loseGame(){
 
 function winGame(){
   stopGame();
-  alert("You won. Congratulations!")
+  alert("Game Over.You won!")
 
-}//end winGme()
+}
+
+
+//the guess function
+function guess(btn){
+   console.log("user guessed: " + btn);
+  if(!gamePlaying){
+    return;
+  }
+  
+  //handling guesses
+  if(btn == pattern[guessCounter]){
+    if(guessCounter == progress){
+      if(progress == (pattern.length)-1){
+        winGame();
+      }else{
+        clearTimer();
+        time.innerHTML = timer;
+        progress++;
+        playClueSequence()
+      }
+    }else{
+      guessCounter++;
+    }
+  }else{
+    mistakes--;
+    life.innerHTML = mistakes;
+    if(mistakes == 0){
+      loseGame()
+    }
+    
