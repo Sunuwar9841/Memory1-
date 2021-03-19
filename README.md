@@ -31,7 +31,7 @@ The Player had 20 sec to hit the right sequence each time
 
 The player needs to hit all the sequences presented at a time to continue and win the game.
 
-If the player misses the sequence there will message appears You lost!
+If The player misses the sequence there will message appears You lost!
 
 
   
