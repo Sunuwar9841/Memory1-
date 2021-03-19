@@ -21,4 +21,5 @@ If you're feeling fancy you can add interactivity to your site with JavaScript.
   
 
 ![Alt Text](https://media.giphy.com/media/J2PwWYnF8RhXDPNF21/giphy.gif)
+![Alt Text](https://media.giphy.com/media/0Fu1yjTzbr49EpY5Ys/giphy.gif)
 
