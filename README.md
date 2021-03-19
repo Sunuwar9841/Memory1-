@@ -24,9 +24,13 @@ Catch The Sound is a light and memory game.
 The game starts with a combination of light and sound and adds up a sequence after each turn.
 
 The Player has to start the game
+
 The Player should able to catch the sound and follow the sequence to win the game.
+
 The Player had 20 sec to hit the right sequence each time
+
 The player needs to hit all the sequences presented at a time to continue and win the game.
+
 If the player misses the sequence there will message appears You lost!
 
 
